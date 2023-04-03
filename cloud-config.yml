@@ -1,3 +1,4 @@
+#cloud-config
 runcmd:
   -  sudo mkfs.ext4 -L RANCHER_STATE /dev/sda
 hostname : ros
