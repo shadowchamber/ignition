@@ -1,6 +1,14 @@
 #cloud-config
 runcmd:
   -  sudo mkfs.ext4 -L RANCHER_STATE /dev/sda
-hostname : ros
+hostname : prod1c
 ssh_authorized_keys:
   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDHhsg/RBS1eofdBtOmRgnk6rQeWL5eDCAFRYatomonqzVPHnUhGAWLwpAinTKY0breG7RwcPzSy8fE3lpAxd7d551SkowQOzLO1auRTvCGgGJMCYhsiOTDdg4yCGdhuvTlgG2Ox8cCEY93Nsh4bjX3m6l9bpqWamdlX5RH5bLypz5lq/Cd3eTprFXCgqJOcRT/7A2TqDeHKvE3zYM6tegke+dQadN41rh9sY3KCG0qfF58tn2FLzJx73H9wRGeCWxThrF5wSzgrFDIYGTJTMUqKgbJVVYWX/bY/nQWT8VO6fLzi+0pAOz931q4enHtO56T44bEqtfg5dSx7bLGIr56Hmln1GHhouU+u76cVTWOojDV5T1WsRATt8aD907Ci97FP/46cR5yJTxaTp+pxWpmh2waGeDRDWQstElHoSjtPyouyUuWb31oTBlk8KwgOep3z17q+YIhZWQGHvmcRKH2PA98IRpiJVRzf8sXJ0cdkouA5WBSDegToB5W7QPmehE= shadowchamber@Shadowchambers-Mac-mini.local
+rancher:
+  network:
+    interfaces:
+      eth1:
+        address: 10.11.1.11/24
+        gateway: 10.11.1.254
+        mtu: 1500
+        dhcp: false
