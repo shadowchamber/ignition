@@ -13,3 +13,6 @@ rancher:
         gateway: 10.11.1.254
         mtu: 1500
         dhcp: false
+    dns:
+      nameservers:
+      - 10.11.1.21
