@@ -9,7 +9,7 @@ rancher:
   network:
     interfaces:
       eth0:
-        address: 10.11.1.11/24
+        address: 10.11.1.13/24
         gateway: 10.11.1.254
         mtu: 1500
         dhcp: false
